@@ -94,6 +94,10 @@ src_libtrexio_la_SOURCES = $(trexio_h) $(SOURCES)
 src_libtrexio_la_LDFLAGS = -version-number \
   $(VERSION_MAJOR):$(VERSION_MINOR):$(VERSION_PATCH)
 
+# Define shared library soversion (consistent with CMake)
+src_libtrexio_la_LDFLAGS = -version-number \
+  $(VERSION_MAJOR):$(VERSION_MINOR):$(VERSION_PATCH)
+
 # Include CMake-related files in the distribution.
 EXTRA_DIST += CMakeLists.txt \
               trex.json \
